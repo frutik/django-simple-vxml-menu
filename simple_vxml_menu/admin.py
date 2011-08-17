@@ -1,4 +1,4 @@
-from menu.models import Menu, MenuItem
+from simple_vxml_menu.models import Menu, MenuItem
 from django.contrib import admin
 
 class MenuAdmin(admin.ModelAdmin):
