@@ -1,5 +1,5 @@
 from django.shortcuts import render_to_response
-from menu.models import Menu, MenuItem
+from simple_vxml_menu.models import Menu, MenuItem
 from django.http import Http404
 
 def vxml_file(request, slug):

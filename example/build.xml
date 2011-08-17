@@ -6,7 +6,7 @@
     <replace
             dir="."
             value="value not found in version.properties"
-            propertyFile="../../properties/django-ivr.properties">
+            propertyFile="../../../properties/django-ivr.properties">
             <include name="*.py"/>
 	    <replacefilter token="@db.backends@" property="db.backends" />
 	    <replacefilter token="@db.name@" property="db.name" />

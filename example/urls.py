@@ -5,5 +5,5 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^vxml/', include('simple_vxml_menu.menu.urls')),
+    url(r'^vxml/', include('simple_vxml_menu.urls')),
 )
