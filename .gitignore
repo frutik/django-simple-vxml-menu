@@ -10,4 +10,5 @@ lighttpd*
 .pydevproject
 .idea
 static
-simple_vxml_menu/settings.py
+example_project/settings.py
+example_project/simple_vxml_menu
