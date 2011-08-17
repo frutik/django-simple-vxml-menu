@@ -13,4 +13,4 @@ def vxml_file(request, slug):
     if not menu_items:
         raise Http404()
 
-    return render_to_response('menu/vxml.xml', {'menu': menu, 'menu_items': menu_items}, mimetype = 'text/xml')
+    return render_to_response('simple_vxml_menu/vxml.xml', {'menu': menu, 'menu_items': menu_items}, mimetype = 'text/xml')
