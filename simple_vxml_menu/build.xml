@@ -1,0 +1,14 @@
+<project name="newsline" default="build" basedir=".">
+<target name="build">
+    <copy todir=".">
+	<fileset dir="src"/>
+    </copy>
+    <replace
+            dir="."
+            value="value not found in version.properties"
+            propertyFile="../properties/django-ivr.properties">
+            <include name="*.py"/>
+            <replacefilter token="@buildNum@" property="buildNum" />
+    </replace>
+</target>
+</project>     
