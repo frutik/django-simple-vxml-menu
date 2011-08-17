@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- -*-SGML-*- -->
+<vxml version = "2.0" xmlns="http://www.w3.org/2001/vxml">
+
+<menu id="top" dtmf="true">
+  <property name="inputmodes" value="dtmf"/>
+  <prompt>{{ menu.greeting }}</prompt>
+  <prompt>
+    <enumerate>
+       For <value expr="_prompt"/>, press <value expr="_dtmf"/>.
+    </enumerate>
+  </prompt>
+  {% for item in menu_items %}
+  <choice next="#{{ item.slug}}">
+    {{ item.title }}
+  </choice>
+  {% endfor %}
+</menu>
+
+{% for item in menu_items %}
+<form id="{{ item.slug }}">
+  <block>
+    <prompt>{{ item.message }}</prompt>
+    <goto next="#top"/>
+  </block>
+</form>
+{% endfor %}
+
+</vxml>

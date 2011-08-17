@@ -7,7 +7,8 @@ class MenuAdmin(admin.ModelAdmin):
 admin.site.register(Menu, MenuAdmin)
 
 class MenuItemAdmin(admin.ModelAdmin):
-    pass
+    list_display_links = list_display = ('menu', 'title')
+    list_filter = ('menu',)
     
 admin.site.register(MenuItem, MenuItemAdmin)
 
