@@ -1,0 +1,19 @@
+<project name="newsline" default="build" basedir=".">
+<target name="build">
+    <copy todir=".">
+	<fileset dir="src"/>
+    </copy>
+    <replace
+            dir="."
+            value="value not found in version.properties"
+            propertyFile="../../properties/django-ivr.properties">
+            <include name="*.py"/>
+	    <replacefilter token="@db.backends@" property="db.backends" />
+	    <replacefilter token="@db.name@" property="db.name" />
+	    <replacefilter token="@db.user@" property="db.user" />
+	    <replacefilter token="@db.password@" property="db.password" />
+	    <replacefilter token="@db.host@" property="db.host" />
+	    <replacefilter token="@db.port@" property="db.port" />
+    </replace>
+</target>
+</project>     
