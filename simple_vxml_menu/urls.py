@@ -4,14 +4,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'simple_vxml_menu.views.home', name='home'),
-    # url(r'^simple_vxml_menu/', include('simple_vxml_menu.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^vxml/(?P<slug>[-\w]+)/$', 'menu.views.vxml_file'),
+    url(r'^vxml/', include('simple_vxml_menu.menu.urls')),
 )
