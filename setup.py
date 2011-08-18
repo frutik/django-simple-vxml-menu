@@ -8,6 +8,6 @@ setup(
     author = "Andrew Kornilov",
     author_email = "frutik@gmail.com",
     description = "A package to help manage vxml menus in Django",
-    url = "http://code.google.com/p/django-testmaker/",
+    url = "http://github.com/frutik/django-simple-vxml-menu/",
     include_package_data = True
 )
